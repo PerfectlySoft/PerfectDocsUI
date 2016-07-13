@@ -237,7 +237,6 @@
 					loadMD($(this).attr('data-attr'));
 					//return false;
 				});
-
 			});
 			
 		
@@ -253,7 +252,7 @@
 					}
 					
 					str += '<li><a href="#'+obj.doc+'" data-attr="'+obj.doc+'" class="noul loadMD">'+obj.name+'</a></li>';
-					console.log('contents: ',obj.contents)
+					//console.log('contents: ',obj.contents)
 					if(typeof obj.contents !== 'undefined') {
 						str += recursiveTOC(obj.contents);
 					}
@@ -267,7 +266,7 @@
 					var converter = new showdown.Converter(),
 					text      = data,
 					html      = converter.makeHtml(text);
-					console.log(html)
+					//console.log(html)
 					$('#markdowncontent').html(html);
 				});
 	
