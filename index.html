@@ -40,9 +40,20 @@
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
 <style>
+/*
+	theme specific
+*/
 	.noul
 	{
 		text-decoration: none;	
+	}
+	#tocmenu li {
+		margin-left: 0px;
+	}
+	#tocmenu li {
+		list-style: none;
+		margin-bottom: 0px;
+		font-size: 0.9em
 	}
 </style>
 </head>
@@ -258,7 +269,7 @@
 					}
 				}
 				
-				return '<ul>'+str+'</ul>';
+				return '<ul id="tocmenu">'+str+'</ul>';
 			}
 			
 			function loadMD(str){
