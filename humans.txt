@@ -1,0 +1,37 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+	Andrea Gust -- Information Architect -- @AndieGust
+	Jen Hawkyard -- Art Director -- @jezhawk
+	Kerri Williscroft -- User Interface Designer -- @KerriDesign
+	Kevin Cobus -- SEO Manager -- @KevinCobus
+	Clive Moore -- User Experience Lead -- @cliveMoore
+	Kyle Jessup -- Technical Lead, Cheif Architect -- @badting
+	Laurie Baker -- Social Antropoligist -- @AnthGrad
+	Liam Lahey -- Content Development -- @LiamLahey
+	Sarid Layton -- Business Development Manager -- @SaridLayton
+	Sean Stephens -- CEO -- @TreefrogCEO
+	Stephanie Greenall -- Social Media -- @SDGreenall
+    
+# THANKS
+
+	Apple, LassoSoft, Paul Irish, Dan Cederholm, Scott Jehl, David DeSandro, Lea Verou
+
+# DOCUMENTATION
+
+	http://a.mphibio.us/
+	http://github.com/Treefrog-Interactive/A.mphibio.us
+
+# TECHNOLOGY COLOPHON
+
+	Perfect,
+	Swift,
+	HTML5,
+	CSS3,
+	Normalize.css,
+	jQuery,
+	Modernizer,
+	Prefixfree,
+	Picture Fill,
+	Respond JS
