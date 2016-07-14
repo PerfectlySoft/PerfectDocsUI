@@ -55,7 +55,12 @@
 		margin-bottom: 0px;
 		font-size: 0.9em
 	}
-	#markdowncontent p
+	#markdowncontent
+	{
+		font-size: 90%;
+	}
+	#markdowncontent p,
+	#markdowncontent li
 	{
 		font-size: 0.9em !important;
 	}
@@ -281,12 +286,13 @@
 			}
 			
 			function loadMD(str){
-				$.get('sourceData/guide/'+str+'.md', function( data ) {
+				$.get('sourceData/guide/'+str+'.md?'+Math.random(), function( data ) {
 					var converter = new showdown.Converter(),
 					text      = data,
 					html      = converter.makeHtml(text);
 					//console.log(html)
 					$('#markdowncontent').html(html);
+					scrollTo(0, 0); // force refresh to top
 				});
 	
 			}
