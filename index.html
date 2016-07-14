@@ -43,30 +43,62 @@
 /*
 	theme specific
 */
+	.assistive-text
+	{
+		margin-bottom: 0;
+	}
+	figure.logo #logo
+	{
+		height: 75px;
+	}
+
 	.noul
 	{
 		text-decoration: none;	
 	}
-	#tocmenu li {
+	.tocmenu, 
+	.tocmenu li {
 		margin-left: 0px;
 	}
-	#tocmenu li {
+	.tocmenu li a 
+	{
+		display: block;
+		padding: 0.1em 0.5em;
+		font-size: 0.9rem;
+/* 		font-size: 0.9em; */
+	}
+	.tocmenu .tocmenu li a 
+	{
+		padding-left: 1.5em;
+	}
+/*
+
+	.tocmenu li a {
+		display: block;
+		padding: 0.2em 0;
+	}
+*/
+	.tocmenu li a:hover
+	{
+		background-color: #efefef;
+	}
+	.tocmenu li {
 		list-style: none;
 		margin-bottom: 0px;
-		font-size: 0.9em
+/* 		font-size: 0.9em */
 	}
 	#markdowncontent
 	{
-		font-size: 90%;
+/* 		font-size: 90%; */
 	}
 	#markdowncontent p,
 	#markdowncontent li
 	{
-		font-size: 0.9em !important;
+/* 		font-size: 0.9em !important; */
 	}
 	#markdowncontent pre
 	{
-		font-size: 0.8em !important;
+/* 		font-size: 0.8em !important; */
 	}
 </style>
 </head>
@@ -76,9 +108,9 @@
 <div id="page-wrapper">
 	<header id="amp_header" role="banner" class="row top-bottom">
 		<div id="header" class="container">
-			<div class="col seven">
+			<div class="col six">
 				<a href="index.html" title="One language to rule them all, Server Side Swift by Perfect" style="display: block;">
-					<h1 class="assistive-text">perfect.org</h1>
+					<h2 class="assistive-text">perfect.org</h2>
 					<figure class="logo">
 						<img id="logo" src="./images/perfect-logo.svg" align="" class="swg">
 					</figure>
@@ -86,8 +118,9 @@
 				
 				<a id="menu-toggle" href="#main"><span class="icon-menu-list"></span></a>
 			</div>
-			<div class="col seventeen dpt hmt">
+			<div class="col eighteen pt hmt">
 				<div class="row">
+					<span class="left">Documentation</span>
 				<ul class="socialnav r mb">
 					<li class="pr"><small>Follow Us</small></li>
 					<li><a href="https://www.linkedin.com/company/10318313" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -105,37 +138,16 @@
 	<main id="amp_content" role="main">
 		<section id="server-side-swift">
 
-			<div class="row wht-bg dpt pb mt">
+			<div class="row wht-bg pt pb">
 			
 				<div class="container">
 					<div class="row">
-						<div id="search_form" class="inline search r">
-							<form class="searchForm" action="search.html">
-								<fieldset>
-									<label for="q" class="assistive-text">Search</label>
-									<input class="search_text" type="text" name="q" placeholder="Search Our Site" id="tipue_search_input" autocomplete="off" required>
-									<button type="reset" id="search_cancel" class="search_cancel search_toggle" tabindex="-1" style="z-index: 2;">
-										<span class="icon-cross-round"></span>
-									</button>
-									<button type="submit" class="search_submit">
-										<span class="icon-search"></span>
-									</button>
-								</fieldset>
-							</form>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="col twenty_two suffix_two dpb">
-							<header>
-								<h1>Documentation</h1>
-							</header>
-			
-							<div class="row">
-								<div id="toccolumn" class="col eight first br"></div>
-								<div class="col sixteen last" id="markdowncontent"></div>
-							</div>
-
+						
+						<div id="toccolumn" class="col six first"></div>
+						
+						<div class="col eighteen last">
+							<section id="markdowncontent">
+							</section>
 						</div>
 					</div>
 
@@ -144,9 +156,6 @@
 			</div>
 			
 		</section>
-
-		
-
 
 	</main>
 
@@ -282,7 +291,7 @@
 					}
 				}
 				
-				return '<ul id="tocmenu">'+str+'</ul>';
+				return '<ul class="tocmenu">'+str+'</ul>';
 			}
 			
 			function loadMD(str){
