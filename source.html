@@ -22,9 +22,11 @@
 <!-- Place favicon.ico in the root directory -->
 
 <link rel="stylesheet" href="css/perfect.css">
+<link rel="stylesheet" href="css/theme-swift.css">
 
 <script src="js/js/modernizr-2.6.2.min.js"></script>
 <script src="js/js/prefixfree.min.js"></script>
+<script type="text/javascript" src="js/syntaxhighlighter.js"></script>
 
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -51,6 +53,15 @@
 		border-radius: 4px;
 		font-size: 0.96rem;
 	}
+	.syntaxhighlighter
+	{
+		background-color: #fafafa;
+		box-shadow: 0 0 0 2px #eee;
+		border-radius: 4px;
+		font-size: 0.96rem;
+		min-height: 2.2em;
+	}
+
 	li>code,
 	p>code
 	{
@@ -140,6 +151,7 @@
 	{
 /* 		font-size: 0.8em !important; */
 	}
+	code { display: inline-block !important; }
 </style>
 </head>
 <!--[if lt IE 8]>
@@ -297,56 +309,6 @@
 		<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=ntwej&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
 	</noscript>
 	
-	<script type="text/javascript">
-		$(function() {
-			var firstLoad = "";
-		
-			$.getJSON('sourceData/guide/toc.json', function( data ) {
-				var str = recursiveTOC(data.contents);
-				$('#toccolumn').html(str);
-				
-				$('.loadMD').on('click',function(){
-					loadMD($(this).attr('data-attr'));
-					//return false;
-				});
-			});
-			
-		
-			function recursiveTOC(data){
-				var str = "";
-				for(var i=0; i < data.length; i++) {
-					var obj = data[i];
-					
-					// eval firstload
-					if(firstLoad.length === 0){
-						firstLoad = "complete";
-						loadMD(obj.doc);
-					}
-					
-					str += '<li><a href="#'+obj.doc+'" data-attr="'+obj.doc+'" class="noul loadMD">'+obj.name+'</a></li>';
-					//console.log('contents: ',obj.contents)
-					if(typeof obj.contents !== 'undefined') {
-						str += recursiveTOC(obj.contents);
-					}
-				}
-				
-				return '<ul class="tocmenu">'+str+'</ul>';
-			}
-			
-			function loadMD(str){
-				$.get('sourceData/guide/'+str+'.md?'+Math.random(), function( data ) {
-					var converter = new showdown.Converter(),
-					text      = data,
-					html      = converter.makeHtml(text);
-					//console.log(html)
-					$('#markdowncontent').html(html);
-					scrollTo(0, 0); // force refresh to top
-				});
-	
-			}
-		});
-		
-	</script>
 
 	</body>
 </html>
