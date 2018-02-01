@@ -1153,7 +1153,7 @@ a:hover,
 a:focus
 {
     outline: 0;
-    color: #191919;
+/*    color: #191919; */
 }
 
 p a,
